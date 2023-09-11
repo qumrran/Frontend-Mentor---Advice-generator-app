@@ -1,9 +1,9 @@
-const btn = document.querySelector(".app__quote");
+const btn = document.querySelector(".app__button");
 const adviceNumber = document.querySelector(".app__advice");
 const quote = document.querySelector(".app__quote");
 
 function fetchAndDisplayQuote() {
-  fetch("https://api.adviceslip.com/advice")
+  fetch("https://api.adviceslip.com/advice", {cache: "no-cache"})
     .then(res => res.json())
     .then(data => {
       const advice = data.slip.advice;
@@ -16,8 +16,4 @@ function fetchAndDisplayQuote() {
     });
 }
 
-// Dodaj obsługę kliknięcia przycisku i wywołaj funkcję fetchAndDisplayQuote() przy każdym kliknięciu
 btn.addEventListener('click', fetchAndDisplayQuote);
-
-// Wywołaj funkcję fetchAndDisplayQuote() na początku, aby pobrać pierwszy cytat
-fetchAndDisplayQuote();
