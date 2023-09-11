@@ -1,0 +1,52 @@
+@import 'reset';
+@import 'variables';
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: $dark-blue;
+}
+
+.app {
+    display: grid;
+    justify-items: center;
+    position: relative;
+    width: clamp(343px, 50%, 540px);
+    height: clamp(315px, 50%, 332px);
+    background-color: $dark-grayish-blue;
+    border-radius: 15px;
+
+    &__advice {
+        font-size: 10px;
+        letter-spacing: 5px;
+        padding-top: 50px;
+        color:$neon-green;
+    }
+    &__quote {
+        font-size: 20px;
+        font-weight: bold;
+        color: $light-cyan;
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    &__patternImage {
+        padding-bottom: 79px;
+    }
+    &__button {
+        position: absolute;
+        bottom: -32px;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        border: none;
+        background-color:$neon-green;
+        cursor: pointer;
+    }
+    &__button:hover {
+        box-shadow: 0px 0px 50px -6px rgba(82, 250, 168, 1);
+    }
+
+}
